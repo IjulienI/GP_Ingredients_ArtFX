@@ -8,17 +8,18 @@ public class aLever : Interactive
     public override void OnInteraction()
     {
         open = true;
+        interactionType = InteractionType.FailedAction;
     }
 
     private void Update()
     {
         if (open)
         {
-            transform.GetChild(1).rotation = Quaternion.Lerp(transform.GetChild(1).rotation,Quaternion.Euler(45,0,0),.4f);
+            transform.GetChild(1).rotation = Quaternion.Lerp(transform.GetChild(1).rotation,Quaternion.Euler(45,0,0),.02f);
         }
         else
         {
-            transform.GetChild(1).rotation = Quaternion.Lerp(transform.GetChild(1).rotation, Quaternion.Euler(-45, 0, 0), .4f);
+            transform.GetChild(1).rotation = Quaternion.Lerp(transform.GetChild(1).rotation, Quaternion.Euler(-45, 0, 0), .02f);
         }
     }
 }
