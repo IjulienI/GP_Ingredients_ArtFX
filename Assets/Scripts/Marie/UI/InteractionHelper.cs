@@ -10,7 +10,8 @@ public class InteractionHelper : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if(!Instance) Instance = this;
+        else if(gameObject) Destroy(gameObject);
     }
 
     public void Show(InteractionType interaction = InteractionType.None)
