@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escape The Dungeon.unity
     guid: 4eeb9ddab3a29844bb7f984ac3ed7423
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: 55806995cdf54b24083907869661ed77
   m_configObjects: {}
