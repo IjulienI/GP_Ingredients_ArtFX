@@ -13,7 +13,8 @@ public class PlayerInteraction : MonoBehaviour
     private void Start()
     {
         _anim = GetComponent<PlayerInteractionAnim>();
-        _inventory = Inventory.Instance;
+        if(!_inventory)_inventory = Inventory.Instance;
+        else if(gameObject) Destroy(gameObject);
     }
 
     public void SetInteraction(InteractionType interaction)
