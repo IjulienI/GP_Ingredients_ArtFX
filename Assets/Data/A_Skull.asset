@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 860554354440e4ccd910433df6815a76, type: 3}
-  m_Name: A_Balance
+  m_Name: A_Skull
   m_EditorClassIdentifier: 
   ID: SKULL
   icon: {fileID: 21300000, guid: ab5e0e59b5321450599f187724894bb8, type: 3}
-  prefab: {fileID: 100000, guid: 34636936646bab64fb61023e7f3410ba, type: 3}
+  prefab: {fileID: 0}
   allowDuplicates: 0
