@@ -1,9 +1,11 @@
+using UnityEditor;
 using UnityEngine;
 
 public class A_EnignManager : MonoBehaviour
 {
     private int leverIndex = 1;
     [SerializeField] private A_Lever[] levers;
+    [SerializeField] private A_ScriptedDoor door;
     private GameObject _player;
     private GameObject _infoCamera;
     private void Start()
@@ -30,6 +32,7 @@ public class A_EnignManager : MonoBehaviour
         {
             _infoCamera.SetActive(true);
             _player.transform.GetChild(2).gameObject.SetActive(false);
+            door.OpenDoor();
             Invoke(nameof(EndAnim), 3);
         }
     }
