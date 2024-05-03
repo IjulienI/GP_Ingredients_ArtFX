@@ -81427,6 +81427,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 99e55592c6d88984cb6b00f2455032dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1323692645}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 99e55592c6d88984cb6b00f2455032dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1323692649}
   m_SourcePrefab: {fileID: 100100000, guid: 99e55592c6d88984cb6b00f2455032dc, type: 3}
 --- !u!4 &1323692641 stripped
 Transform:
@@ -81454,6 +81457,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1323692649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648736782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c382f4c2d53b524fa11889f516d5774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1327884254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87572,7 +87587,7 @@ Animator:
   m_GameObject: {fileID: 1386827791}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d6c297cab233f7b48a4a3f22a62b52ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: b6c0e89b6e9e95846b553175d732c2e3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -109618,6 +109633,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 99e55592c6d88984cb6b00f2455032dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1913120354}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 99e55592c6d88984cb6b00f2455032dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1913120358}
   m_SourcePrefab: {fileID: 100100000, guid: 99e55592c6d88984cb6b00f2455032dc, type: 3}
 --- !u!4 &1875088515 stripped
 Transform:
@@ -110116,6 +110134,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1913120358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913120350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c382f4c2d53b524fa11889f516d5774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1914060811 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3403033971355921497, guid: 3a1dc3e054a222f48a2dd916be2f8b01, type: 3}
@@ -116287,6 +116317,7 @@ MonoBehaviour:
   - {fileID: 1914060814}
   - {fileID: 962455030}
   door: {fileID: 2144258143}
+  torchOn: 9
 --- !u!4 &1984614905
 Transform:
   m_ObjectHideFlags: 0

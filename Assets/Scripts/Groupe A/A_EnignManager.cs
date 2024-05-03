@@ -52,10 +52,12 @@ public class A_EnignManager : MonoBehaviour
         if(torchOn == torchCount)
         {
             A_BigDoor[] doors = GameObject.FindObjectsOfType<A_BigDoor>();
-            foreach(A_BigDoor door in doors)
+            Debug.Log(doors.Length);
+            for (int i = 0; i < doors.Length; i++)
             {
-                door.OpenDoor();
+                doors[i].OpenDoor();
             }
         }
+        
     }
 }
