@@ -8,11 +8,14 @@ public class A_EnignManager : MonoBehaviour
     [SerializeField] private A_ScriptedDoor door;
     private GameObject _player;
     private GameObject _infoCamera;
+    private int torchCount = 0;
+    private int torchOn = 0;
     private void Start()
     {
         _player = GameObject.Find("Man");
         _infoCamera = GameObject.Find("InfoCamera");
         _infoCamera.SetActive(false);
+        torchCount = GameObject.FindObjectsOfType<A_Torch>().Length;
     }
     public void FirstEnigm(int index)
     {
@@ -41,5 +44,18 @@ public class A_EnignManager : MonoBehaviour
     {
         _player.transform.GetChild(2).gameObject.SetActive(true);
         _infoCamera.SetActive(false);       
+    }
+
+    public void AddLightTorch()
+    {
+        torchOn++;
+        if(torchOn == torchCount)
+        {
+            A_BigDoor[] doors = GameObject.FindObjectsOfType<A_BigDoor>();
+            foreach(A_BigDoor door in doors)
+            {
+                door.OpenDoor();
+            }
+        }
     }
 }

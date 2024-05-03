@@ -6,7 +6,7 @@ public class A_Torch : Interactive
 {
     public override void OnInteraction()
     {
-        //GameObject.FindObjectOfType<A_BigDoor>().AddLightTorch();
+        GameObject.FindObjectOfType<A_EnignManager>().AddLightTorch();
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(1).gameObject.SetActive(true);
     }
