@@ -10,12 +10,22 @@ public class A_EnignManager : MonoBehaviour
     private GameObject _infoCamera;
     private int torchCount = 0;
     private int torchOn = 0;
+
+    private A_Balance[] _balances;
+    private int skullOn = 0;
+    private int maxSkull;
+    [SerializeField] private GameObject balanceDoor;
     private void Start()
     {
         _player = GameObject.Find("Man");
         _infoCamera = GameObject.Find("InfoCamera");
         _infoCamera.SetActive(false);
         torchCount = GameObject.FindObjectsOfType<A_Torch>().Length;
+        _balances = GameObject.FindObjectsOfType<A_Balance>();
+        for (int i = 0; i < _balances.Length; i++)
+        {
+            maxSkull += _balances[i].GetMaxSkulls();
+        }
     }
     public void FirstEnigm(int index)
     {
@@ -53,11 +63,29 @@ public class A_EnignManager : MonoBehaviour
         {
             A_BigDoor[] doors = GameObject.FindObjectsOfType<A_BigDoor>();
             Debug.Log(doors.Length);
+
+            _infoCamera.transform.rotation = Quaternion.Euler(_infoCamera.transform.rotation.x, 180, _infoCamera.transform.rotation.z);
+            _infoCamera.SetActive(true);
+            _player.transform.GetChild(2).gameObject.SetActive(false);
+            Invoke(nameof(EndAnim), 3.5f);
+
             for (int i = 0; i < doors.Length; i++)
             {
                 doors[i].OpenDoor();
             }
+        }        
+    }
+
+    public void AddSkull()
+    {
+        skullOn = 0;
+        for (int i = 0; i < _balances.Length; i++)
+        {
+            skullOn += _balances[i].GetSkullsCount();
         }
-        
+        if (skullOn == maxSkull)
+        {
+            balanceDoor.GetComponent<Animator>().SetTrigger("open");
+        }
     }
 }

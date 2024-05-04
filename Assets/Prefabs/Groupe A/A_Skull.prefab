@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6860895033569716450, guid: 34636936646bab64fb61023e7f3410ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 34636936646bab64fb61023e7f3410ba, type: 3}
       propertyPath: m_Name
       value: A_Skull
@@ -75,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 34636936646bab64fb61023e7f3410ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3647306572617616344}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 34636936646bab64fb61023e7f3410ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1809093694509997225}
   m_SourcePrefab: {fileID: 100100000, guid: 34636936646bab64fb61023e7f3410ba, type: 3}
 --- !u!1 &3058946103998380030 stripped
 GameObject:
@@ -95,3 +102,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8a2ee40fcc7e8124daa23800c9a45c0e, type: 2}
   fromFloor: 1
+--- !u!135 &1809093694509997225
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3058946103998380030}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.16043626
+  m_Center: {x: -0.0047995094, y: 0.07795947, z: 0.0074141603}
